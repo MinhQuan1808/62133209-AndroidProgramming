@@ -64,34 +64,38 @@
 
         <Button
             android:id="@+id/btnCong"
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:onClick="XuLyCong"
             android:text="+" />
 
         <Button
             android:id="@+id/btnTru"
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:onClick="XuLyTru"
             android:text="-" />
 
         <Button
             android:id="@+id/btnNhan"
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:onClick="XuLyNhan"
             android:text="*" />
 
         <Button
             android:id="@+id/btnChia"
-            android:layout_margin="2dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_margin="2dp"
             android:layout_weight="1"
+            android:onClick="XuLyChia"
             android:text="/" />
     </LinearLayout>
     <LinearLayout
