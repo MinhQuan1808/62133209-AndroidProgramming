@@ -19,7 +19,18 @@ public class MainActivity extends AppCompatActivity {
         btnNhan.setOnClickListener(boLangNghe_XuLyNhan);
         //btnChia.setOnClickListener(boLangNghe_XuLyChia);
         //Vi du su dung bo lang nghe an danh
-
+        btnChia.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String so1 = edtA.getText().toString();
+                String so2 = edtB.getText().toString();
+                double soA = Double.parseDouble(so1);
+                double soB = Double.parseDouble(so2);
+                double thuong = soA / soB;
+                String chuoiKQ = String.valueOf(thuong);
+                tvKQ.setText(chuoiKQ);
+            }
+        });
     }
     //Tao cac bo lang nghe va xu ly su kien
     View.OnClickListener boLangNghe_XuLyCong = new View.OnClickListener() {
@@ -58,18 +69,18 @@ public class MainActivity extends AppCompatActivity {
             tvKQ.setText(chuoiKQ);
         }
     };
-    View.OnClickListener boLangNghe_XuLyChia = new View.OnClickListener() {
-        @Override
-        public void onClick(View v) {
-            String so1 = edtA.getText().toString();
-            String so2 = edtB.getText().toString();
-            double soA = Double.parseDouble(so1);
-            double soB = Double.parseDouble(so2);
-            double thuong = soA * soB;
-            String chuoiKQ = String.valueOf(thuong);
-            tvKQ.setText(chuoiKQ);
-        }
-    };
+  //  View.OnClickListener boLangNghe_XuLyChia = new View.OnClickListener() {
+ //       @Override
+ //       public void onClick(View v) {
+ //           String so1 = edtA.getText().toString();
+  //          String so2 = edtB.getText().toString();
+  //          double soA = Double.parseDouble(so1);
+  //          double soB = Double.parseDouble(so2);
+  //          double thuong = soA / soB;
+  //          String chuoiKQ = String.valueOf(thuong);
+   //         tvKQ.setText(chuoiKQ);
+ //       }
+ //   };
     //----------------------------------------------------------------------
     void TimView(){
         edtA = findViewById(R.id.edtA);
