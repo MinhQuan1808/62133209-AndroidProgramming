@@ -1,2 +1,2 @@
 # 62133209-AndroidProgramming
-Cap nhat
+Nộp bài tập Android tại đây
