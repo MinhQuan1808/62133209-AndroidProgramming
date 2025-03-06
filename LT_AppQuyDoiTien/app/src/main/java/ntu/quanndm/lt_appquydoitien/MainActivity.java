@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
         TimDieuKhien();
     }
     void TimDieuKhien(){
-        edtTien = (EditText) findViewById(R.id.edtTien);
-        edtKQ = (EditText) findViewById(R.id.edtKQ);
-        btnUSD = (Button) findViewById(R.id.btnUSD);
-        btnEURO = (Button) findViewById(R.id.btnEURO);
-        btnWON = (Button) findViewById(R.id.btnWON);
-        btnYEN = (Button) findViewById(R.id.btnYEN);
-        btnNDT = (Button) findViewById(R.id.btnNDT);
+        edtTien = findViewById(R.id.edtTien);
+        edtKQ = findViewById(R.id.edtKQ);
+        btnUSD = findViewById(R.id.btnUSD);
+        btnEURO = findViewById(R.id.btnEURO);
+        btnWON = findViewById(R.id.btnWON);
+        btnYEN = findViewById(R.id.btnYEN);
+        btnNDT = findViewById(R.id.btnNDT);
     }
     public void DoiUSD(View view){
         String soTien = edtTien.getText().toString();
