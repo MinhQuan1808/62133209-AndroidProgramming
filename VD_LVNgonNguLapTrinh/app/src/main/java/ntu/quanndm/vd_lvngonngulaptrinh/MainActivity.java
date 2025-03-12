@@ -4,8 +4,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -29,10 +31,11 @@ public class MainActivity extends AppCompatActivity {
         //B3. Gan adapter
         LVNNLT.setAdapter(adapterNNLT);
         //B4. Gan bo lang nghe va xu su kien
-        LVNNLT.setOnClickListener(new View.OnClickListener() {
+        LVNNLT.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onClick(View v) {
-                
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                String giaTriDuocChon = dsNgonNguLT.get(position);
+                Toast.makeText(MainActivity.this, giaTriDuocChon, Toast.LENGTH_SHORT).show();
             }
         });
     }
