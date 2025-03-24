@@ -47,124 +47,172 @@
         app:layout_constraintTop_toTopOf="@id/etSearch" />
 
     <!-- Categories Grid -->
-    <GridLayout
+
+    <ImageView
+        android:id="@+id/ivCrossIcon"
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_cross"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCrossword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginEnd="10dp"
+        app:layout_constraintTop_toBottomOf="@+id/gridCategories" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/gridCategories"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:columnCount="2"
         android:rowCount="2"
-        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/etSearch">
 
-        <!-- Maths -->
-        <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:background="@drawable/bg_maths"
-            android:padding="16dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="171dp"
+            android:layout_height="152dp"
+            android:background="@drawable/math"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="9dp">
+
             <TextView
+                android:id="@+id/textView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
                 android:text="Maths\n40 topics"
+                android:textColor="#000"
                 android:textSize="18sp"
                 android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.164"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <!-- Science -->
+            <ImageView
+                android:id="@+id/ivMathIcon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="2dp"
+                android:layout_marginBottom="7dp"
+                android:src="@drawable/ic_math"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
         <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:background="@drawable/bg_science"
-            android:padding="16dp">
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/science"
+            android:padding="16dp"
+            tools:layout_editor_absoluteX="226dp"
+            tools:layout_editor_absoluteY="0dp">
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="SCIENCE\n45 topics"
+                android:textColor="#000"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/linearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintMarginTop="10dp">
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
         </LinearLayout>
 
-        <!-- Music -->
-        <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:background="@drawable/bg_music"
-            android:padding="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Music\n30 videos"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
-
-        <!-- Painting -->
-        <LinearLayout
-            android:layout_width="160dp"
-            android:layout_height="120dp"
-            android:background="@drawable/bg_painting"
-            android:padding="16dp">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Painting\n20 videos"
-                android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="#000" />
-        </LinearLayout>
-    </GridLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Crossword Puzzles Button -->
+
+    <!-- Essay & Rhymes Section -->
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/essay"
+        android:text="Essay"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_conversion_absoluteHeight="50dp"
+        tools:layout_conversion_absoluteWidth="206dp"
+        tools:layout_editor_absoluteY="559dp" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rhym"
+        android:text="Rhymes"
+        android:textColor="#000"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:layout_conversion_absoluteHeight="50dp"
+        tools:layout_conversion_absoluteWidth="206dp"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="549dp" />
+
     <Button
         android:id="@+id/btnCrossword"
         android:layout_width="0dp"
         android:layout_height="50dp"
-        android:background="@drawable/bg_crossword"
+        android:background="@drawable/cross"
         android:text="CROSSWORD PUZZLES"
+        android:textColor="#000"
         android:textSize="16sp"
         android:textStyle="bold"
-        android:textColor="#000"
-        app:layout_constraintTop_toBottomOf="@id/gridCategories"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintMarginEnd="20dp"
         app:layout_constraintMarginStart="20dp"
-        app:layout_constraintMarginEnd="20dp" />
+        app:layout_constraintMarginTop="20dp"
+        tools:layout_editor_absoluteX="12dp"
+        tools:layout_editor_absoluteY="436dp" />
 
-    <!-- Essay & Rhymes Section -->
     <LinearLayout
-        android:layout_width="match_parent"
+        android:id="@+id/linearLayout4"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/btnCrossword"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintMarginTop="10dp">
+        android:background="@drawable/paint"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="199dp"
+        tools:layout_editor_absoluteY="269dp">
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_essay"
-            android:text="Essay"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#000" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Painting\n20 videos"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+    </LinearLayout>
 
-        <Button
-            android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:layout_weight="1"
-            android:background="@drawable/bg_rhymes"
-            android:text="Rhymes"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            android:textColor="#000" />
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/music"
+        android:padding="16dp"
+        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteY="269dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Music\n30 videos"
+            android:textColor="#000"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
