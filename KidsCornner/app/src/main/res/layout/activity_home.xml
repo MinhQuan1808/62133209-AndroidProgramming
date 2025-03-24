@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomeActivity">
+    <!-- Greeting Text -->
+    <TextView
+        android:id="@+id/tvGreeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hi, Good Morning"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintMarginStart="20dp" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/etSearch"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/search"
+        android:hint="Search"
+        android:paddingStart="16dp"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginEnd="20dp"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvGreeting" />
+
+    <!-- Search Icon -->
+    <ImageView
+        android:id="@+id/ivSearchIcon"
+        android:layout_width="31dp"
+        android:layout_height="0dp"
+        android:src="@drawable/ic_search"
+        app:layout_constraintBottom_toBottomOf="@id/etSearch"
+        app:layout_constraintEnd_toEndOf="@id/etSearch"
+        app:layout_constraintMarginEnd="10dp"
+        app:layout_constraintTop_toTopOf="@id/etSearch" />
+
+    <!-- Categories Grid -->
+    <GridLayout
+        android:id="@+id/gridCategories"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:columnCount="2"
+        android:rowCount="2"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Maths -->
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_maths"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Maths\n40 topics"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Science -->
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_science"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="SCIENCE\n45 topics"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Music -->
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_music"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Music\n30 videos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+
+        <!-- Painting -->
+        <LinearLayout
+            android:layout_width="160dp"
+            android:layout_height="120dp"
+            android:background="@drawable/bg_painting"
+            android:padding="16dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Painting\n20 videos"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#000" />
+        </LinearLayout>
+    </GridLayout>
+
+    <!-- Crossword Puzzles Button -->
+    <Button
+        android:id="@+id/btnCrossword"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/bg_crossword"
+        android:text="CROSSWORD PUZZLES"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:textColor="#000"
+        app:layout_constraintTop_toBottomOf="@id/gridCategories"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="20dp"
+        app:layout_constraintMarginStart="20dp"
+        app:layout_constraintMarginEnd="20dp" />
+
+    <!-- Essay & Rhymes Section -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/btnCrossword"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginTop="10dp">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_essay"
+            android:text="Essay"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000" />
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_weight="1"
+            android:background="@drawable/bg_rhymes"
+            android:text="Rhymes"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#000" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
