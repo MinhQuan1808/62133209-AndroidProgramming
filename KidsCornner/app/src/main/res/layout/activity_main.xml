@@ -6,13 +6,87 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+    <ImageView
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="-30dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/draw2"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="140dp"
+        android:layout_height="140dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/draw4"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:layout_width="165dp"
+        android:layout_height="156dp"
+        android:layout_marginEnd="52dp"
+        android:layout_marginBottom="100dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/draw5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivLamp"
+        android:layout_width="138dp"
+        android:layout_height="272dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="52dp"
+        android:src="@drawable/draw3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvKidsCorner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="144dp"
+        android:text="KIDS Corner"
+        android:textColor="#000"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintMarginTop="80dp"
+        app:layout_constraintStart_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivEasel"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/draw1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKidsCorner" />
+
+    <ImageView
+        android:id="@+id/ivSmile"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/draw6"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvKidsCorner" />
+
+    <TextView
+        android:id="@+id/tvVersion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="v1.0.1"
+        android:textSize="12sp"
+        android:textColor="#D3D3D3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintMarginBottom="20dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
