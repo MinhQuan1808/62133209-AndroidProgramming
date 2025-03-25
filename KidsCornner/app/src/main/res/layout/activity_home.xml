@@ -149,48 +149,95 @@
         android:id="@+id/button"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="36dp"
         android:background="@drawable/essay"
         android:text="Essay"
         android:textColor="#000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrossword"
+        app:layout_constraintVertical_bias="0.02"
         tools:layout_conversion_absoluteHeight="50dp"
-        tools:layout_conversion_absoluteWidth="206dp"
-        tools:layout_editor_absoluteY="559dp" />
+        tools:layout_conversion_absoluteWidth="206dp" />
+
+
+    <ImageView
+        android:id="@+id/ivEssayIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="236dp"
+        android:layout_marginBottom="124dp"
+        android:src="@drawable/ic_essay"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/button2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_width="176dp"
+        android:layout_height="82dp"
         android:background="@drawable/rhym"
         android:text="Rhymes"
         android:textColor="#000"
         android:textSize="16sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.68"
+        app:layout_constraintStart_toEndOf="@+id/button"
+        app:layout_constraintTop_toBottomOf="@+id/btnCrossword"
+        app:layout_constraintVertical_bias="0.275"
         tools:layout_conversion_absoluteHeight="50dp"
-        tools:layout_conversion_absoluteWidth="206dp"
-        tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="549dp" />
+        tools:layout_conversion_absoluteWidth="206dp" />
+
+    <ImageView
+        android:id="@+id/ivRhymIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginBottom="124dp"
+        android:src="@drawable/ic_rhym"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/btnCrossword"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
+        android:layout_width="376dp"
+        android:layout_height="53dp"
+        android:layout_marginBottom="220dp"
         android:background="@drawable/cross"
         android:text="CROSSWORD PUZZLES"
         android:textColor="#000"
         android:textSize="16sp"
         android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="471dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageView
+        android:id="@+id/ivCrossIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:src="@drawable/ic_cross"
+        app:layout_constraintBottom_toBottomOf="@+id/btnCrossword"
+        app:layout_constraintEnd_toEndOf="@+id/btnCrossword"
+        app:layout_constraintTop_toTopOf="@+id/btnCrossword"
+        app:layout_constraintVertical_bias="0.59" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/linearLayout4"
         android:layout_width="171dp"
         android:layout_height="152dp"
+        android:layout_marginTop="28dp"
         android:background="@drawable/paint"
-        tools:layout_editor_absoluteX="224dp"
-        tools:layout_editor_absoluteY="289dp">
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.698"
+        app:layout_constraintStart_toEndOf="@+id/linearLayout3"
+        app:layout_constraintTop_toBottomOf="@+id/gridCategories">
 
         <TextView
             android:id="@+id/textView4"
@@ -200,12 +247,20 @@
             android:layout_marginTop="16dp"
             android:text="Painting\n20 videos"
             android:textColor="#000"
-
-
             android:textSize="18sp"
             android:textStyle="bold"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivPaintIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="4dp"
+            android:src="@drawable/ic_paint"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
