@@ -23,7 +23,13 @@ public class Cau1Activity extends AppCompatActivity {
         btnTong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                
+                String so1 = edtA.getText().toString();
+                String so2 = edtB.getText().toString();
+                float soA = Float.parseFloat(so1);
+                float soB = Float.parseFloat(so2);
+                float tong = soA + soB;
+                String chuoiKQ = String.valueOf(tong);
+                edtKQ.setText(chuoiKQ);
             }
         });
     }
