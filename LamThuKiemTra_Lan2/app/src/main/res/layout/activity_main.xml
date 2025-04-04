@@ -42,7 +42,7 @@
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/button3"
+            android:id="@+id/btnC3"
             android:layout_width="125dp"
             android:layout_height="80dp"
             android:layout_marginRight="20dp"
@@ -52,7 +52,7 @@
             android:text="Cau 3" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/btnC4"
             android:layout_width="125dp"
             android:layout_height="80dp"
             android:layout_weight="1"
