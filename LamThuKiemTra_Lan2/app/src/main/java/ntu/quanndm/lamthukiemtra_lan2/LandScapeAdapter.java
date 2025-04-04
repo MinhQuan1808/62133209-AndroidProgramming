@@ -1,4 +1,4 @@
-package ntu.quanndm.recyclerview;
+package ntu.quanndm.lamthukiemtra_lan2;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -12,11 +12,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.ArrayList;
 
-public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.ItemLandHolder> {
+public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.itemLandHolder> {
     Context context;
     ArrayList<LandScape> lstData;
 
-    //Generate Contrustion
     public LandScapeAdapter(Context context, ArrayList<LandScape> lstData) {
         this.context = context;
         this.lstData = lstData;
@@ -24,15 +23,15 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
 
     @NonNull
     @Override
-    public ItemLandHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public itemLandHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater cai_bom = LayoutInflater.from(context);
         View vItem = cai_bom.inflate(R.layout.item_land, parent, false);
-        ItemLandHolder viewHolderCreated = new ItemLandHolder(vItem);
+        itemLandHolder viewHolderCreated = new itemLandHolder(vItem);
         return viewHolderCreated;
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ItemLandHolder holder, int position) {
+    public void onBindViewHolder(@NonNull itemLandHolder holder, int position) {
         LandScape landHienThi = lstData.get(position);
         String caption = landHienThi.getLandCaption();
         String tenAnh = landHienThi.getLandImageFileName();
@@ -47,14 +46,15 @@ public class LandScapeAdapter extends RecyclerView.Adapter<LandScapeAdapter.Item
         return lstData.size();
     }
 
-    class ItemLandHolder extends RecyclerView.ViewHolder{
+
+    class itemLandHolder extends RecyclerView.ViewHolder{
         TextView tvCaption;
         ImageView ivLand;
-
-        public ItemLandHolder(@NonNull View itemView) {
+        public itemLandHolder(@NonNull View itemView) {
             super(itemView);
-            tvCaption = itemView.findViewById(R.id.textViewCaption);
-            ivLand = itemView.findViewById(R.id.imageViewLand);
+            tvCaption = itemView.findViewById(R.id.tvLand);
+            ivLand = itemView.findViewById(R.id.imgLand);
         }
     }
+
 }

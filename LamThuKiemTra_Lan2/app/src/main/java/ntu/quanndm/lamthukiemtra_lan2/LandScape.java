@@ -1,14 +1,14 @@
-package ntu.quanndm.recyclerview;
+package ntu.quanndm.lamthukiemtra_lan2;
 
 public class LandScape {
     String landImageFileName;
     String landCaption;
-    //Generate Contrustion
+
     public LandScape(String landImageFileName, String landCaption) {
         this.landImageFileName = landImageFileName;
         this.landCaption = landCaption;
     }
-    //Generate Getter Setter
+
     public String getLandImageFileName() {
         return landImageFileName;
     }

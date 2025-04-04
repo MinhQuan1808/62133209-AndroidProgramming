@@ -1,9 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Cau4Activity">
+    android:background="@color/white">
 
+    <!-- Ảnh đại diện -->
+
+    <!-- Tên -->
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="36dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/profile"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NGUYỄN"
+        android:textStyle="bold"
+        android:textSize="24sp"
+        app:layout_constraintTop_toBottomOf="@id/profile_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Chức danh -->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="SINH VIÊN"
+        android:textStyle="italic"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@id/name"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Liên hệ -->
+    <TextView
+        android:id="@+id/contact_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Liên hệ"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Kinh nghiệm làm việc -->
+
+    <TextView
+        android:id="@+id/contact_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="104dp"
+        android:text="📞 0838853139\n✉ quan.ndm.62cntt@ntu.edu.vn\n📍 21 Nguyễn Bình Khiêm, Nha Trang, Khánh Hòa"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/contact_title" />
+
+    <TextView
+        android:id="@+id/work_experience_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kinh nghiệm làm việc"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/contact_info"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/work_experience_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CGV Lotte, Nha Trang\n03-2023 - 01-2025\nNhân viên"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/work_experience_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Sở thích -->
+    <TextView
+        android:id="@+id/hobbies_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sở thích"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/work_experience_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/hobbies_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="- Tập GYM\n- Chơi Game\n- Tìm hiểu những phần mềm mới"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/hobbies_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Ngoại ngữ -->
+    <TextView
+        android:id="@+id/languages_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ngoại ngữ"
+        android:textStyle="bold"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/hobbies_details"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <TextView
+        android:id="@+id/languages_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tiếng Anh: ●●●●○\nTiếng Nhật: ●●●○○\nTiếng Hàn: ●●○○○\nTiếng Trung: ●○○○○"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/languages_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 </androidx.constraintlayout.widget.ConstraintLayout>
