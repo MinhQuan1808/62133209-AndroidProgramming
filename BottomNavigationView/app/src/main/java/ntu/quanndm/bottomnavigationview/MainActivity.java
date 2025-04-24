@@ -1,14 +1,37 @@
 package ntu.quanndm.bottomnavigationview;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
+    BottomNavigationView bottomNav;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        bottomNav = findViewById(R.id.bot_nav);
+        bottomNav.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                int mnuItemDuocChon = item.getItemId();
+                if(mnuItemDuocChon == R.id.mnu_home){
+                    Toast.makeText(MainActivity.this, "Thay HOME", Toast.LENGTH_SHORT).show();
+                } else if(mnuItemDuocChon == R.id.mnu_search) {
+                    Toast.makeText(MainActivity.this, "Thay SEARCH", Toast.LENGTH_SHORT).show();
+                } else if (mnuItemDuocChon == R.id.mnu_profile) {
+                    Toast.makeText(MainActivity.this, "Thay PROFILE", Toast.LENGTH_SHORT).show();
+                } else {
+                    return false;
+                }
+                return true;
+            }
+        });
     }
 }
