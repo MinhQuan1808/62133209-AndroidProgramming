@@ -5,6 +5,13 @@
         android:id="@+id/mnu_home"
         android:icon="@drawable/baseline_home_24"
         android:title="HOME" />
-    <item android:title="SEARCH" />
-    <item android:title="PROFILE" />
+    <item
+        android:id="@+id/mnu_search"
+        android:icon="@drawable/baseline_home_24"
+        android:title="SEARCH" />
+
+    <item
+        android:id="@+id/mnu_profile"
+        android:icon="@drawable/baseline_home_24"
+        android:title="PROFILE" />
 </menu>
