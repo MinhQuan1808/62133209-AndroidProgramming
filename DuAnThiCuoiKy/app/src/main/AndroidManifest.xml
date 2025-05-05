@@ -12,6 +12,21 @@
         android:theme="@style/Theme.DuAnThiCuoiKy"
         tools:targetApi="31">
         <activity
+            android:name=".KHActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KHUpdateActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BGLIstActivity"
+            android:exported="false" />
+        <activity
+            android:name=".HDListActivity"
+            android:exported="false" />
+        <activity
+            android:name=".KHListActivity"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
