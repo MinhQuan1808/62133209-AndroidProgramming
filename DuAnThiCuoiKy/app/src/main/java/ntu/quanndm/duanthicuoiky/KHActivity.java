@@ -28,7 +28,7 @@ public class KHActivity extends AppCompatActivity {
         edtSDT = findViewById(R.id.edtSDT);
         btnTh = findViewById(R.id.btnTh);
         khDatabase = openOrCreateDatabase("kh.db", MODE_PRIVATE, null);
-        
+
         autoGenerateMKH();
         btnTh.setOnClickListener(new View.OnClickListener() {
             @Override
