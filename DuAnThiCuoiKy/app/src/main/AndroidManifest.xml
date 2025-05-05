@@ -12,6 +12,12 @@
         android:theme="@style/Theme.DuAnThiCuoiKy"
         tools:targetApi="31">
         <activity
+            android:name=".BGActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BGUpdateActivity"
+            android:exported="false" />
+        <activity
             android:name=".HDUpdateActivity"
             android:exported="false" />
         <activity
