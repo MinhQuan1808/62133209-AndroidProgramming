@@ -102,7 +102,7 @@ public class BGLIstActivity extends AppCompatActivity {
 
         while (c.moveToNext()) {
             String data = c.getString(0) + " - " +
-                    c.getString(1) + " -> " +
+                    c.getString(1) + " - " +
                     c.getString(2) + " - " +
                     c.getString(3);
             bgList.add(data);
