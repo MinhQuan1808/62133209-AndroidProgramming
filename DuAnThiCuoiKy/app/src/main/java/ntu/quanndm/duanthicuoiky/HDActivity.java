@@ -45,14 +45,18 @@ public class HDActivity extends AppCompatActivity {
         btnTINH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                // Lấy giá trị đầu kỳ, cuối kỳ và chuyển sang kiểu int
                 int dk = Integer.parseInt(edtDK.getText().toString());
                 int ck = Integer.parseInt(edtCK.getText().toString());
+                // Tính số điện đã sử dụng
                 int sodien = ck - dk;
                 int tongtien;
                 String msg = "";
+                // Kiểm tra nếu sodien âm → thông báo lỗi
                 if (sodien < 0){
                     msg = "Chỉ số cuối kỳ phải lớn hơn chỉ số đầu kỳ!";
                 }
+                // Tính tongtien theo biểu giá bậc thang
                 else {
                     if (sodien < 51){
                         tongtien = sodien*1893;
@@ -80,13 +84,15 @@ public class HDActivity extends AppCompatActivity {
                             }
                         }
                     }
+                    // Hiển thị tiền điện tính được
                     edtTIEN.setText(tongtien+"");
                     msg = "Success";
                 }
+                // Hiển thị thông báo kết quả thành công hoặc lỗi
                 Toast.makeText(HDActivity.this, msg, Toast.LENGTH_SHORT).show();
             }
         });
-        edtMSKH.setOnItemClickListener((parent, view, position, id) -> autoGenerateMHD());
+        edtMSKH.setOnItemClickListener((parent, view, position, id) -> taoThongTinTuDong());
         btnTHEM.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -137,14 +143,8 @@ public class HDActivity extends AppCompatActivity {
         }
         return super.onOptionsItemSelected(item);
     }
-    private void autoGenerateMHD() {
+    private void taoThongTinTuDong() {
         String mskh = edtMSKH.getText().toString();
-        if (mskh.isEmpty()) {
-            edtMHD.setText("HD1");
-            edtDATE.setText("");
-            edtDK.setText("");
-            return;
-        }
         Cursor cursor = hdDatabase.rawQuery(
                 "SELECT mhd, date, ck FROM hd WHERE mskh = ? ORDER BY date DESC LIMIT 1",
                 new String[]{mskh});

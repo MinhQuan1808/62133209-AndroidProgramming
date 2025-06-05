@@ -101,7 +101,7 @@ public class HDListActivity extends AppCompatActivity {
                     "Tháng/Năm sử dụng: " + date + "\n" +
                     "Chỉ số đầu kỳ: " + dk + "\n" +
                     "Chỉ số cuối kỳ: " + ck + "\n" +
-                    "Tổng kWh: " + totalKWh + " VNĐ" + "\n" +
+                    "Tổng kWh: " + totalKWh + " kWh" + "\n" +
                     "- Mức 1: " + level1 + " kWh. Thành tiền: " + NumberFormat.getInstance(Locale.GERMANY).format(costLevel1) + " VNĐ\n" +
                     "- Mức 2: " + level2 + " kWh. Thành tiền: " + NumberFormat.getInstance(Locale.GERMANY).format(costLevel2) + " VNĐ\n" +
                     "- Mức 3: " + level3 + " kWh. Thành tiền: " + NumberFormat.getInstance(Locale.GERMANY).format(costLevel3) + " VNĐ\n" +
